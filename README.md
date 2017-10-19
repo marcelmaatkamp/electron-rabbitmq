@@ -1,6 +1,7 @@
 # Application description
 
 Simple RabbitMQ Electron Application to display messages send to a topic exchange 'input' in RabbitMQ.
+
 <img src="https://raw.githubusercontent.com/marcelmaatkamp/electron-rabbitmq/master/images/screenshot.png" height="200">
 
 ## Build and start (debug) application
