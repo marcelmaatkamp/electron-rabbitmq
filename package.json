@@ -1,14 +1,19 @@
 {
-  "name": "Prices",
-  "version": "1.0.0",
-  "description": "Prices of commodities",
-  "repository": "electron/simple-samples",
-  "main": "app.js",
-  "scripts": {
-    "start": "electron app.js"
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^1.4.12"
-  }
+ "name": "Electron-RabbitMQ",
+ "version": "1.0.0",
+ "description": "",
+ "repository": "marcelmaatkamp/electron-rabbitmq",
+ "main": "app.js",
+ "scripts": {
+  "start": "electron app.js"
+ },
+ "license": "ISC",
+ "devDependencies": {
+  "electron": "^1.4.12"
+ },
+ "dependencies": {
+  "amqp-ts": "1.4.0",
+  "convict": "^3.0.0",
+  "winston": "^2.4.0"
+ }
 }
