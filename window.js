@@ -1,6 +1,26 @@
 // Run this function after the page has loaded
 $(() => {
 
+let Winston = require('winston');
+Winston.remove(Winston.transports.Console);
+const log = new Winston.Logger({
+ level: 'verbose',
+ transports: [
+  new Winston.transports.Console({
+   timestamp: true
+  })
+ ]
+});
+var config_amqp = require('./convict_amqp');
+var amqp = require('amqp-ts');
+
+var connection = new amqp.Connection(config_amqp.get("amqp.url"));
+var queue = connection.declareQueue(config_amqp.get("amqp.queue"));
+queue.activateConsumer((message) => {
+  log.info(message.getContent());
+  message.ack();
+});
+
   stocks = [
     'CL=F', // Crude oil, http://finance.yahoo.com/quote/CL=F?p=CL=F
     'GC=F', // Gold, https://finance.yahoo.com/quote/GC=F?p=GC=F

@@ -5,15 +5,17 @@
  "repository": "marcelmaatkamp/electron-rabbitmq",
  "main": "app.js",
  "scripts": {
-  "start": "electron app.js"
+  "pack": "electron-builder --dir",
+  "dist": "electron-builder"
  },
  "license": "ISC",
  "devDependencies": {
-  "electron": "^1.4.12"
+  "electron-builder": "^19.37.2"
  },
  "dependencies": {
   "amqp-ts": "1.4.0",
   "convict": "^3.0.0",
   "winston": "^2.4.0"
- }
+ },
+ "postinstall": "electron-builder install-app-deps"
 }
