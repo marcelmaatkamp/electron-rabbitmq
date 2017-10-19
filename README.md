@@ -17,5 +17,5 @@ Simple RabbitMQ Electron Application
 ## Test
 
 ```
-$ echo iboe | amqp-publish -u amqp://rabbitmq -e input -r "some_sort_of_routing_key";
+$ echo boe | amqp-publish -u amqp://rabbitmq -e input -r "some_sort_of_routing_key";
 ```
