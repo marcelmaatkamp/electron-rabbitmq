@@ -13,3 +13,9 @@ Simple RabbitMQ Electron Application
  $ yarn add electron-builder --dev
  $ yarn dist
 ```
+
+## Test
+
+```
+$ echo iboe | amqp-publish -u amqp://rabbitmq -e input -r "some_sort_of_routing_key";
+```
