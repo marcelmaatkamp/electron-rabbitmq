@@ -1,5 +1,4 @@
-# electron-rabbitmq
-Simple RabbitMQ Electron Application
+Simple RabbitMQ Electron Application to display messages send to a (topic) exchange in RabbitMQ. 
 
 ## Build and start (debug) application
 
